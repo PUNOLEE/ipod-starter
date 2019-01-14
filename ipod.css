@@ -1,0 +1,176 @@
+/* 
+	Global classes 
+					*/
+body {
+  background-image: url("images/iphoneOL.jpg");
+  background-repeat: no-repeat;
+  font-family: Avenir, sans-serif;
+}
+
+#screen {
+  height: 530px;
+  width: 300px;
+  margin: 105px 23px;
+}
+
+.head-bar {
+  background-color: #e6ccff;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px #211d22;
+  height: 45px;
+}
+
+.head-bar.songs {
+  text-align: left;
+  text-shadow: none;
+}
+
+.back-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  margin: 0.4em;
+  height: 33px;
+  width: 45px;
+  font-size: 0.9em;
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+.back-button > i {
+  color: purple;
+  line-height: 2.2;
+}
+
+/* 
+	Albums 
+			*/
+
+.albums {
+  width: 300px;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.albums-album-link {
+  text-decoration: none;
+  color: black;
+}
+.albums-album-wrapper {
+  width: 130px;
+  margin: 10;
+}
+
+.albums-album-art {
+  width: 100%;
+}
+
+.albums-album-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10 0;
+}
+
+.albums-album-name {
+  margin: 0;
+}
+
+.albums-artist-name {
+  margin: 0;
+}
+
+/* 
+	Songs 
+			*/
+.songs-info-wrapper {
+  margin: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 160px;
+}
+
+.songs-album-art {
+  width: auto;
+  height: 100%;
+}
+.songs-caption {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0 0 0.7em;
+}
+
+.songs-album-name {
+  margin: 0;
+}
+
+.songs-artist-name {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.songs-text-info {
+  list-style: decimal;
+  border: 1px solid grey;
+  margin-bottom: 0.3em;
+}
+
+.songs-text-info > a {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 0.2em;
+}
+
+.songs-text-info > a:focus {
+  text-decoration: underline;
+  color: purple;
+}
+
+.songs-album-year {
+  font-weight: 500;
+  margin: 0;
+}
+
+.songs-list {
+  margin-right: 0.8em;
+}
+
+/* 
+	Player 
+			*/
+.player-album-art {
+}
+
+.player-song-info {
+}
+
+#player-song-name {
+}
+
+.volume-bar {
+}
+
+.volume-level {
+}
+
+.volume-rocker {
+}
+
+.player-controls {
+}
+
+#player-time {
+}
+
+#time-elapsed {
+}
+
+#time-total {
+}
