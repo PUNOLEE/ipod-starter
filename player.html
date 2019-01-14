@@ -1,0 +1,49 @@
+<html>
+<header>
+   <title>Music Player</title>
+   <link rel="stylesheet" type="text/css" href="ipod.css"/>
+   <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous"
+  />
+</header>
+<body>
+   <div id="screen">
+      <div class="head-bar songs">
+         <a class="back-button" href="albums.html">
+           <i class="fas fa-arrow-left"></i>
+         </a>
+       </div>
+   <img src="images/currents.jpg" alt="Currents Album Cover"/>
+   <div>
+      <p>The Less I Know The Better</p>
+      <p><em>Currents</em> - Tame Impala</p>
+   </div>
+   <input type="range">
+   <div>0:00</div>
+   <div>3:00</div>
+   <div>
+      <button onclick="prevSong()"></button>
+      <button onclick="switchPlay()""></button>
+      <button onclick="nextSong()"></button>
+   </div>
+   <div>
+      <div id="vl0"></div>
+      <div id="vl1"></div>
+      <div id="vl2"></div>
+      <div id="vl3"></div>
+      <div id="vl4"></div>
+      <div id="vl5"></div>
+   </div>
+   <button onclick="volDown()">&mdash;</button>
+   <button onclick="volUp()">+</button>
+   
+</div>
+<script src="ipod.js"></script>
+</body>
+</html>
+<!-- 
+* bg iphone img is 363x762px
+* iphone 'screen' is apprx 300x530 -->
