@@ -146,27 +146,90 @@ body {
 	Player 
 			*/
 .player-album-art {
+  width: 230px;
+  margin: 0.8em auto;
+  display: inherit;
 }
 
 .player-song-info {
+  text-align: center;
 }
 
 #player-song-name {
+  color: grey;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.player-album-details {
+  color: purple;
+}
+
+.player-song-info > p {
+  margin: 1px;
 }
 
 .volume-bar {
+  width: 24px;
+  margin: auto;
+  height: 6px;
+  border: 1px solid black;
 }
 
 .volume-level {
+  width: 230px;
+  margin: 0.8em auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .volume-rocker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.volume-rocker > button {
+  width: 100px;
+  font-size: 12px;
 }
 
 .player-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+.player-controls > button {
+  font-size: 0.8em;
+  padding: 0.5em 0.8em;
+  width: 2.8em;
+}
+
+.player-controls > button:first-child {
+  margin-right: 5px;
+}
+
+.player-controls > button:last-child {
+  margin-left: 5px;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  margin: 0 auto;
 }
 
 #player-time {
+  width: 230px;
+  margin: 0 auto;
+  display: inherit;
 }
 
 #time-elapsed {
