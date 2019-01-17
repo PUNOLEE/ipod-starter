@@ -19,15 +19,19 @@ var counter = 0;
 
 function init() {
   // Your code goes here
-  if (!initSuccess) {
+  if (!initSuccess) { // init only once
     var currentPlayer = document.getElementById("player-time");
+    // init the default player time
     currentPlayer.value = 0;
+    // generate volLevel reference
     for (let i = 0; i < 6; i++)
       volLevels.push(document.getElementById("vl" + i));
+    // init the volume bars' bg color
     volLevels[0].style.backgroundColor = "purple";
     volLevels[1].style.backgroundColor = "purple";
     volLevels[2].style.backgroundColor = "purple";
     initSuccess = true;
+    // current volume level
     volIndex = 2;
   }
 }
@@ -53,7 +57,7 @@ function switchPlay() {
   var currentPlayer = document.getElementById("player-time");
   var currentTime = document.getElementById("time-elapsed");
   var icon = document.getElementById("switchPlay");
-
+  // pause or resume
   if (icon.className == "fas fa-play") {
     icon.className = "fas fa-pause";
     paused = false;
@@ -61,7 +65,7 @@ function switchPlay() {
     icon.className = "fas fa-play";
     paused = true;
   }
-
+  // count up timer function
   var playback = function() {
     if (!paused) {
       counter++;
@@ -73,7 +77,7 @@ function switchPlay() {
         counter = 0;
       }
     } else {
-      // resume
+      // pause & resume
       clearInterval(timer);
     }
   };
