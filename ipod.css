@@ -195,6 +195,10 @@ body {
   font-size: 12px;
 }
 
+#volDown:focus, #volUp:focus{
+  background-color: #e6ccff;
+}
+
 .player-controls {
   display: flex;
   flex-direction: row;

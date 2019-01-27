@@ -19,7 +19,8 @@ var counter = 0;
 
 function init() {
   // Your code goes here
-  if (!initSuccess) { // init only once
+  if (!initSuccess) {
+    // init only once
     var currentPlayer = document.getElementById("player-time");
     // init the default player time
     currentPlayer.value = 0;
@@ -52,6 +53,16 @@ function volDown() {
   }
 }
 
+function setRange(e) {
+  // player has been dragged
+  if (Number(e.target.value) === 180) {
+    counter = 0;
+    nextSong();
+  } else counter = Number(e.target.value);
+  var currentTime = document.getElementById("time-elapsed");
+  currentTime.innerHTML = secondsToMs(counter);
+}
+
 function switchPlay() {
   // Your code goes here
   var currentPlayer = document.getElementById("player-time");
@@ -69,7 +80,6 @@ function switchPlay() {
   var playback = function() {
     if (!paused) {
       counter++;
-      console.log(counter);
       currentTime.innerHTML = secondsToMs(counter);
       currentPlayer.value = counter;
       if (counter === 180) {
@@ -87,15 +97,24 @@ function switchPlay() {
 
 function nextSong() {
   // Your code goes here
+  var currentPlayer = document.getElementById("player-time");
   var currentSong = document.getElementById("player-song-name");
+  var currentTime = document.getElementById("time-elapsed");
   var s = currentSong.innerHTML;
   currentSong.innerHTML =
     tracklist[(tracklist.indexOf(s) + 1) % tracklist.length];
+
+  // reset current player and time elapsed
+  currentPlayer.value = 0;
+  currentTime.innerHTML = secondsToMs(0);
+  counter = 0;
 }
 
 function prevSong() {
   // Your code goes here
+  var currentPlayer = document.getElementById("player-time");
   var currentSong = document.getElementById("player-song-name");
+  var currentTime = document.getElementById("time-elapsed");
   var s = currentSong.innerHTML;
   currentSong.innerHTML =
     tracklist[
@@ -103,6 +122,10 @@ function prevSong() {
         ? tracklist.length - 1
         : tracklist.indexOf(s) - 1
     ];
+  // reset current player and time elapsed
+  currentPlayer.value = 0;
+  currentTime.innerHTML = secondsToMs(0);
+  counter = 0;
 }
 
 function secondsToMs(d) {
